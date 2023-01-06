@@ -78,6 +78,7 @@ Really the biggest benefit with home row mods is that I don't have to hold keys 
 Anyways.... Home row mods are great. Here is a quick rundown of things you will add to your config to mess with and use them:
 
 * config.h
+
 ```c
 // Setup tapping term
 // This is the time (ms) for the processor to distinguish between press or hold
@@ -98,6 +99,7 @@ Anyways.... Home row mods are great. Here is a quick rundown of things you will 
 ```
 
 * keymap.c
+
 ```c
 #ifdef TAPPING_TERM_PER_KEY
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
@@ -164,6 +166,7 @@ To make modifications to your current keymap which enables the use of source fil
 To then include them in the compilation you make only a few edits.
 
 1. In the keymap.c file you can add them like so:
+
 ```c 
 #include "quantum.h"
 #include QMK_KEYBOARD_H
@@ -185,10 +188,13 @@ LEADER_EXTERNS();
 #endif
 
 ```
+
 2. In rules.mk you add any c files (not header files) to the source list. This is important as the headers only serve the references to functions
+
 ```c
 TAP_DANCE_ENABLE = yes 
 SRC += lib/tapdance.c
 ```
+
 
 Anyways, that isn't super helpful or anything. But saves me time and prevents me from dealing with user space.
