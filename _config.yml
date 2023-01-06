@@ -8,6 +8,7 @@ description: Trying my best
 
 lsi: false
 safe: true
+theme: midnight
 incremental: false
 highlighter: rouge
 gist:
