@@ -3,4 +3,5 @@ url: https://crimsonk1ng.github.io  # the base hostname and protocol for your si
 baseurl: /crimsonk1ng.github.io/      # place folder name if the site is served in a subfolder
 title: Crimson
 description: Trying my best
-theme: midnight
+theme: minima
+markdown: kramdown
